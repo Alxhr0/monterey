@@ -12,8 +12,10 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+wget https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-40/solopasha-hyprland-fedora-40.repo -O /etc/yum.repos.d/solopasha-hyprland-fedora-40.repo
+
 # this installs a package from fedora repos
-rpm-ostree install screen
+rpm-ostree install hyprland waybar thunar thunar-archive-plugin thunar-volman swww kitty brightnessctl sddm xdg-desktop-portal-hyprland neovim htop rofi-wayland
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
